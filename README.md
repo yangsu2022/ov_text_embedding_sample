@@ -8,13 +8,14 @@ pip install -r requirements.txt
 python convert_quantize-ov_embedding-bge-m3-gpu.py
 ```
 You can also convert bge-small-zh-v1.5 with script `convert_quantize_ov_embedding.py` or modify this script for other BGE models.
-### Compare acc with pytorch model: 
+### Acc checking:
+Compare generation with pytorch model via Mean Squared Error (MSE) 
 ```bash
 python compare-ov_embedding-bge-m3-int8-int4.py
 ```
 
 ### Setup for C++ deployment:
-Use Windows Command Prompt to build and install OV.
+Use Windows Command Prompt:
 ```bash
 curl -O https://storage.openvinotoolkit.org/repositories/openvino_genai/packages/pre-release/2025.1.0.0rc3/openvino_genai_windows_2025.1.0.0rc3_x86_64.zip
 tar -xf openvino_genai_windows_2025.1.0.0rc3_x86_64.zip
